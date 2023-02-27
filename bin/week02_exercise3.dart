@@ -5,10 +5,18 @@ class Guest {
   Guest(this.name, this.time);
 }
 
-Future<void> main() async {
+void main() {
   var g1 = Guest('Billy', DateTime.now());
   print('${g1.name} checked in at ${g1.time}');
-  await Future.delayed(const Duration(seconds: 3));
-  var g2 = Guest('David', DateTime.now());
-  print('${g2.name} checked in at ${g2.time}');
+  Future.delayed(const Duration(seconds: 3)).then((_) {
+    var t1 = DateTime.now();
+    print('${g1.name} checked out at $t1');
+  });
+  print('Wait ${g1.name} to checkout...');
+  /*
+  Output:
+  Billy checked in at 2023-02-27 23:18:43.961272
+  Wait Billy to checkout...
+  Billy checked out at 2023-02-27 23:18:46.967297
+  */
 }
