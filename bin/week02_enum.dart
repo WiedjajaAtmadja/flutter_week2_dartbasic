@@ -1,13 +1,13 @@
 enum PhoneType {
-  Samsung,
-  Iphone,
-  Nokia,
-  Xiaomi,
-  Oppo,
-  Vivo,
+  samsung,
+  iphone,
+  nokia,
+  xiaomi,
+  oppo,
+  vivo,
 }
 
 void main() {
-  PhoneType p = PhoneType.Nokia;
+  PhoneType p = PhoneType.nokia;
   print('PhoneType: $p');
 }
