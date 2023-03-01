@@ -27,7 +27,7 @@ void main() {
   var result = addNumbersPositionalArgs(a);
   print('Result 1 arg: $result');
 
-  result = addNumbersPositionalArgs(a);
+  result = addNumbersPositionalArgs(a, b);
   print('Result 2 args: $result');
 
   result = addNumbersPositionalArgs(a, b, 80);
